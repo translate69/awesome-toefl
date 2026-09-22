@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Changelog</title>
+<style>
+:root{--fg:#1f2328;--muted:#59636e;--link:#0969da;--border:#d1d9e0;--bg:#ffffff;--code:#f6f8fa}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);
+  font:16px/1.75 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:32px 20px 80px}
+h1,h2,h3,h4{line-height:1.35;margin:1.6em 0 .6em}
+h1{font-size:1.9em;border-bottom:2px solid var(--border);padding-bottom:.3em;margin-top:.2em}
+h2{font-size:1.45em;border-bottom:1px solid var(--border);padding-bottom:.25em}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+code{background:var(--code);padding:.15em .4em;border-radius:6px;font-size:.9em;
+  font-family:Consolas,"Microsoft YaHei Mono",monospace}
+pre{background:var(--code);padding:14px;border-radius:10px;overflow:auto}
+pre code{background:none;padding:0}
+table{border-collapse:collapse;width:100%;margin:1em 0;font-size:.95em}
+th,td{border:1px solid var(--border);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:var(--code)}
+blockquote{margin:1em 0;padding:.2em 1em;color:var(--muted);border-left:4px solid var(--border)}
+img{max-width:100%}
+.foot{margin-top:64px;padding-top:16px;border-top:1px solid var(--border);
+  color:var(--muted);font-size:.85em}
+.topbar{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--border);padding:10px 20px;font-size:.9em}
+.topbar a{margin-right:16px;font-weight:600}
+</style>
+</head>
+<body>
+<div class="topbar"><a href="index.html">🏠 首页</a><a href="practice.html">🖥️ 练习台</a><a href="docs/index.html">📚 备考指南</a></div>
+<div class="wrap">
+<h1 id="changelog">Changelog</h1>
+<p>本项目遵循<a href="https://semver.org/lang/zh-CN/">语义化版本</a>（主版本.次版本.修订号）。所有重要变更记录于此。</p>
+<hr />
+<h2 id="v100-2026-08-13">[v1.0.0] — 2026-08-13</h2>
+<p>首个稳定版本。awesome-toefl 从「指南」升级为「可直接使用的备考工具 + 社区题库」。</p>
+<h3 id="_1">✨ 新增</h3>
+<ul>
+<li><strong>英文 README（<a href="README_EN.html">README_EN.md</a>）</strong>，第一屏提供中英文切换，面向国际受众。</li>
+<li><strong>题库与练习台第一屏入口</strong>：README 顶部新增醒目的「立即开始 / Start」按钮，直达<a href="https://wonderfulclaire.github.io/awesome-toefl/practice.html">在线练习台</a>。</li>
+<li><strong>高分范文库（<a href="bank/writing/samples/"><code>bank/writing/samples/</code></a>）</strong>：合并自 <code>toefl-learn</code>，新增 11 篇真题风格范文（综合写作 5 + 学术讨论 6），每篇含题目 + 英文范文 + 中文逐段解析。</li>
+<li><strong>写作参考指南（<a href="docs/06-writing/"><code>docs/06-writing/</code></a>）</strong>：合并 <code>toefl-learn</code> 的 3 份资料——评分量表 <code>scoring-rubric.md</code>、高分句库 <code>sentence-bank.md</code>、模板骨架 <code>templates.md</code>。</li>
+<li><strong>AWL 学术词汇训练营（<a href="tools/vocab/"><code>tools/vocab/</code></a>）</strong>：570 个学术高频词，间隔重复 + 自测，进度存本机。</li>
+<li><strong>写作交互引擎（<a href="tools/writing-interactive.html"><code>tools/writing-interactive.html</code></a>）</strong>：浏览器内拆解范文结构、对照模板练笔。</li>
+<li><strong>无 API Key 模式说明</strong>：明确练习台抽题 / 限时 / 即点即判 / 进度保存全部离线可用，AI 批改为可选功能。</li>
+<li><strong>题库格式说明（<a href="bank/FORMAT.html"><code>bank/FORMAT.md</code></a>）</strong>：定义 <code>bank/data.js</code> 的题目结构与 <code>.md</code> 题库的投稿规范，方便社区补题。</li>
+<li><strong>Issue / PR 模板（<code>.github/</code>）</strong>：新增 Bug 报告、新题投稿、功能建议模板与 PR 模板。</li>
+<li><strong>版本与更新时间徽章</strong>：README 标注 <code>v1.0.0</code> 与最后更新日期。</li>
+</ul>
+<h3 id="_2">♻️ 变更</h3>
+<ul>
+<li>原独立仓库 <code>toefl-learn</code> 的写作范文与词汇工具已合并进本仓库，<code>toefl-learn</code> 标记为 archived。</li>
+<li><code>homepage</code> 字段指向 GitHub Pages 站点 <code>https://wonderfulclaire.github.io/awesome-toefl/</code>。</li>
+</ul>
+<h3 id="_3">📌 说明</h3>
+<ul>
+<li>阅读 / 听力题为 <strong>ETS 风格练习文本，非官方真题</strong>，仅供方法训练。</li>
+<li>写作范文为真题风格示例，非 ETS 官方发布。</li>
+<li>题目与资料持续征集 PR，详见<a href="CONTRIBUTING.html">贡献指南</a>。</li>
+</ul>
+<hr />
+<h2 id="v0x">[v0.x] — 早期版本（汇总）</h2>
+<ul>
+<li>初版指南体系：9 个章节文档（<code>docs/</code>）。</li>
+<li>在线练习台 <code>practice.html</code> + 题库 <code>bank/</code> + AI 陪练 <code>tools/ai_coach.py</code>。</li>
+<li>已开通 GitHub Pages 站点。</li>
+<li>已配置 topics：<code>toefl</code> / <code>toefl-2026</code> / <code>english-learning</code> / <code>exam-preparation</code> / <code>toefl-ibt</code> 等。</li>
+</ul>
+<div class="foot">基于 <a href="https://github.com/WonderfulClaire/awesome-toefl">WonderfulClaire/awesome-toefl</a> 修改 · 许可协议 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>（署名-非商业性使用-相同方式共享） · 仅限非商业个人学习使用</div>
+</div>
+</body>
+</html>
